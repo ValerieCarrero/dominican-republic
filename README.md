@@ -23,8 +23,14 @@ The goal of this project was to practice:
 3. Friendly and vibrant design to reflect the spirit of the island
 
 
-
 🚀 Technologies Used
 
 1. HTML5
 2. CSS3
+   
+🌐 Live Demo
+You can view the live version of the project here:
+
+https://680fe935de2af146f7882001--dominicanrepublic-project.netlify.app/
+
+
