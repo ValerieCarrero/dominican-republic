@@ -1,0 +1,406 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    background-color: #015163;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Global */
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Header */
+.full-width-header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: changeBackground 10s ease-in infinite;
+}
+
+@keyframes changeBackground {
+    0% { background-image: url("images/sea.png"); }
+    33% { background-image: url("images/viaje.jpg"); }
+    66% { background-image: url("images/trans.jpg"); }
+    100% { background-image: url("images/sea.png"); }
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    text-shadow: 0 0 60px #090909;
+    font-size: 18px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list a:hover {
+    background-color: #00A1C5;
+    padding: 5px 10px;
+    border-radius: 999px;
+}
+
+/* Island Name */
+.island-name {
+    background-color: #00A1C5;
+    border-radius: 999px;
+    padding: 10px 15px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.island-name a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+}
+
+.island-name:hover {
+    background-color: #095464;
+    cursor: pointer;
+}
+
+/* Hero Text */
+.container {
+    margin: 370px 0 0 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+   
+}
+
+.title {
+    font-size: 75px;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-shadow: 0 0 50px #090909;
+}
+
+.subtitle {
+    font-size: 63px;
+    font-weight: 500;
+    margin-top: -20px;
+    text-shadow: 0 0 50px #090909;
+}
+
+.dominican-text {
+    font-size: 28px;
+    font-weight: 350;
+    text-shadow: 0 0 50px #090909;
+   
+}
+
+.fish-container {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 40px;
+    position: relative;
+    justify-content: flex-start;
+    
+}
+
+.fish-img {
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    position: absolute;
+    left: 230px
+    
+}
+
+/* Call To Action */
+.cta {
+    background-color: #00A1C5;
+    border-radius: 999px;
+    padding: 10px 15px;
+    margin-top: 10px;
+    width: 130px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 650;
+    font-size: 18px;
+}
+
+.cta a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.cta:hover {
+    background-color: #095464;
+    cursor: pointer;
+}
+
+/* Sections */
+section {
+    margin-top: 60px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+section > p {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Colonial Zone */
+.colonial-zone-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 20px 0 10px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container > p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.image-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.image-container:hover .image-description {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Places */
+
+:root {
+    --gutter: 15px;                       
+    --switcher-min: 16rem;               
+  }
+  
+  /* === SWITCHER === */
+  .wrapper.switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
+    align-items: stretch;                 
+    margin: 0 auto;
+    padding: var(--gutter);
+    gap: 15px
+  }
+  
+ 
+  .wrapper.switcher > .flow {
+    flex: 1 1 var(--switcher-min);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;      
+  }
+  
+  .wrapper.switcher > .flow > .cards-images:last-child {
+    flex-grow: 1; 
+    margin-top: 15px;
+    min-height: 500px       
+  }
+
+
+  .cards-images {
+    background-color: #047189;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    
+}
+
+.cards-images:hover {
+    background-color: #03313b;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card-title {
+    font-weight: 500;
+    margin: 20px 0 10px;
+    font-size: 20px
+}
+
+.card-description {
+    font-size: 18px;
+    font-weight: 250;
+ 
+}
+
+.constanza img {
+    height: 350px
+}
+
+.samana-image img,
+.grande img {
+  height: 500px;        
+  width: 100%;   
+  border-radius: 8px;      
+  object-fit: cover;    
+}
+
+/* Activities */
+.activities {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.activity {
+    background-color: #047189;
+    border-radius: 20px;
+    padding: 15px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(75, 74, 74, 0.5);
+}
+
+.activity img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px 20px;
+}
+
+.activity p {
+    font-size: 15px;
+    font-weight: 300;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    background-color: #0083a1;
+    width: 100%;
+}
+
+footer img {
+    width: 350px;
+    height: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;  
+    padding: 60px;
+    gap: 20px;
+  
+}
+
+.footer-text  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text p {
+    font-size: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+.developer-name {
+    margin-top: 40px;
+    
+}
+
+.github-text a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
